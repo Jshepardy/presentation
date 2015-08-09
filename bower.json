@@ -1,0 +1,24 @@
+{
+  "name": "presi",
+  "version": "0.0.1",
+  "authors": [
+    "shepard"
+  ],
+  "description": "presi",
+  "main": "index.html",
+  "keywords": [
+    "rockdog",
+    "frame"
+  ],
+  "license": "Custom",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-translate": "~2.7.2"
+  }
+}

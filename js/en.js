@@ -1,0 +1,3 @@
+window.RDLangEN = {
+  "mainHeader" : "ROCKDOG"
+};
