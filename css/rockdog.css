@@ -1,0 +1,52 @@
+.nav-indicator {
+  position: absolute;
+  color: black;
+  cursor: pointer;
+  font-size: 35px;
+  z-index: 25;
+}
+
+.nav-indicator:hover {
+  color: white;
+  padding: 10px;
+}
+
+.nav-indicator.right {
+  right: 0px;
+  height: 100%;
+  width: auto;
+  line-height: 100vh;
+  text-align: right;
+}
+
+.nav-indicator.left {
+  left: 0px;
+  height: 100%;
+  line-height: 100vh;
+  width: auto;
+  text-align: left;
+}
+
+.nav-indicator.up {
+  top: 0px;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-indicator.bottom {
+  bottom: 0px;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-indicator>strong {
+  display: block;
+
+}
+
+.slides {
+  box-shadow: 2px 2px 2px 2px black;
+  background-color: rgba(16,16,16,0.6);
+}
