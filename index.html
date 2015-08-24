@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>ROCKDOG - Track Frame Preorder</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -31,16 +31,19 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 		<script type="text/javascript" src="/lib/js/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="/js/pointer.js"></script>
 		<script type="text/javascript" src="/lib/js/angularjs/angular.js"></script>
 		<script type="text/javascript" src="/lib/js/angular-translate/angular-translate.min.js"></script>
 		<script type="text/javascript" src="/lib/js/angular-sanitize/angular-sanitize.min.js"></script>
 		<script type="text/javascript" src="/js/en.js"></script>
+		<script type="text/javascript" src="/js/nl.js"></script>
+		<script type="text/javascript" src="/js/de.js"></script>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
-	<body ng-controller="Rockdog">
+	<body ng-controller="Rockdog" class="animated">
 		<!--div class="nav-indicator right" ng-if="txtRight">
 			<strong class="animated">{{txtRight}}</strong>
 		</div>
@@ -53,33 +56,88 @@
 		<div class="nav-indicator bottom" ng-if="txtBottom">
 			<strong class="animated"><i class="fa fa-bomb"></i>{{txtBottom}}</strong>
 		</div-->
-		<div class="reveal">
+		<div class="pointer contact animated" data-entry="slideInRight" ng-click="Reveal.slide(1,0)"><i class="fa fa-envelope"></i>&nbsp;<i class="fa fa-forward"></i></div></div>
+		<div class="pointer contact-up animated" data-entry="slideInDown" ng-click="Reveal.slide(1,0)"><i style="transform:rotate(90deg);-webkit-transform:rotate(90deg);margin-left:3px;" class="fa fa-backward"></i><br><i class="fa fa-envelope"></i></div>
+		<div class="pointer presentation-down animated" data-entry="slideInUp" ng-click="Reveal.next()"><i style="transform:rotate(270deg);-webkit-transform:rotate(270deg);" class="fa fa-backward"></i></div>
+		<div class="pointer presentation-up animated" data-entry="slideInDown" ng-click="Reveal.prev()"><i style="transform:rotate(90deg);-webkit-transform:rotate(90deg);" class="fa fa-backward"></i></div>
+		<div class="pointer presentation-left animated" data-entry="slideInLeft" ng-click="Reveal.slide(0,0)"><i class="fa fa-backward"></i></div>
+		<div class="pointer agbs animated" data-entry="slideInUp" ng-click="Reveal.slide(1,1)"><i class="fa fa-legal"></i><br style="margin-bottom:5px;"><i style="transform:rotate(270deg);-webkit-transform:rotate(270deg);" class="fa fa-backward"></i></div>
+		<div class="pointer animated cname" data-entry="slideInDown"></div>
+		<div class="presi-btn" ng-if="presiMode">
+			<i class="fa fa-play fa-3x" ng-click="ch_img()"></i>&nbsp;
+			<i class="fa fa-stop fa-3x" ng-click="presi_mode()"></i>
+		</div>
+		<div id="logo" ng-click="toggleOverview()" class="animated fadeIn">
+
+		</div>
+		<div class="frame-img animated"><img width="{{image.h}}" height="{{image.w}}" ng-src="{{image.path}}"></div>
+		<div class="reveal animated">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section data-nav-right="{{'contact' | translate}}" data-nav-bottom="{{'presentation' | translate}}">
-					
+					<section data-nav-right="{{'contact' | translate}}" data-nav-up="{{'presentation' | translate}}" data-nav-bottom="{{'presentation' | translate}}">
+					<h3 style="font-size:75px;">Extraordinary offer</h3>
+						<p>
+							<img width="526" height="300" data-src="/public/startFrame.png" class="animated zoomIn"><br>
+							<span style="font-size: 26px;text-align:left;line-height:1.4;display:inline-block;padding:5px;margin-top:20px;">
+Limited for the first x orders: Get <b>your</b> fully customized limited edition frame now! Let's meet up and <b>together</b> we’ll design a one of a kind ride.
+
+All designs are limited to one piece each, <b>yours</b>.</span>
+						</p>
+						
+					</section>
 					<section data-nav-right="{{'contact' | translate}}" data-nav-bottom="{{'presentation' | translate}}">
-					<h1>{{ "mainHeader" | translate }}</h1>
 					<p>
-						<img width="402" height="300" data-src="/public/Frame1.png">
-					</p>
-					<h3>Preorder now</h3>
+							<div style="font-size: 26px;text-align:left;line-height:1.4;display:inline-block;padding:5px;"><strong style="font-size:45px;text-align:left;display:block;" class="animated jello">{{'street'| translate}}</strong>We took the original track geometry and made it suitable as well as super fast for the street.
+As agile as you need it and as fast and as you dare to.</div><br>
+						<img style="cursor:pointer;" ng-click="presi_mode(0, 0)" width="432" height="360" data-src="/public/Frame2.png">
+
+						</p>
+
+
 					</section>
 					<section data-nav-right="{{'contact' | translate}}" data-nav-up="{{'presentation' | translate}}" data-nav-bottom="{{'presentation' | translate}}">
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<p>
+							<img width="541" height="360" data-src="/public/Back-prev.png" class="animated fadeInDown"><br>
+							<span style="font-size: 26px;text-align:left;line-height:1.4;display:inline-block;padding:5px;margin-top:20px;"><strong style="font-size:30px;text-align:left;display:block;" class="animated jello">Mind the gap / Get together </strong>
+
+To keep it short: Short chainstay, steep head angle and the short top tube will give you the ultimate wheelbase.  Short sprints, evening rides and a common get together with your friends could be a lot more fun - if you’re ready. Are you?</span>
+						</p>
+						
 					</section>
-					<section data-nav-right="{{'contact' | translate}}" data-nav-up="{{'presentation' | translate}}">
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					<section data-nav-right="{{'contact' | translate}}" data-nav-up="{{'presentation' | translate}}" data-nav-bottom="{{'presentation' | translate}}">
+						<div style="padding: 0px 10px 0px 10px;text-align:left;width:45%;float:left;">
+						<img style="cursor:pointer;margin-bottom: 20px; float:right;margin-left:20px;" class="animated fadeInDown" ng-click="presi_mode(0, 0)" width="432" height="360" data-src="/public/Dropouts-prev.png"/><div style="font-size: 13px;text-align:left;display:inline-block;"><strong style="font-size:10px;text-align:left;">Ready to drop / Hap-Hap</strong>
+						<br><ul style="list-style:none;font-size:13px;">
+							<li style="margin-bottom:10px">Exchangeable dropouts</li>
+							<li style="margin-bottom:10px">stainless steel</li>
+							<li style="margin-bottom:10px">ultra stiff and ready to bite</li>
+						</ul></div>
+					</div>
+					<div style="padding: 0px 10px 0px 10px;text-align:left;float:right;width:45%;">
+						<img style="cursor:pointer" class="animated fadeInDown" ng-click="presi_mode(0, 0)" width="432" height="360" data-src="/public/Back_Z.png"><div style="font-size: 12px;text-align:left;display:inline-block;"><strong style="font-size:12px;text-align:left;">Ready to drop / Hap-Hap</strong><br>
+						<ul style="list-style:none;margin-top:20px;font-size:13px;">
+							<li style="margin-bottom:10px">Exchangeable dropouts</li>
+							<li style="margin-bottom:10px">stainless steel</li>
+							<li style="margin-bottom:10px">ultra stiff and ready to bite</li>
+						</ul></div>
+					</div>
 					</section>
 				</section>
 
 				<section data-nav-left="{{'presentation' | translate}}" data-nav-bottom="{{'agb' | translate}}">	
 					<section data-nav-left="{{'presentation' | translate}}" data-nav-bottom="{{'agb' | translate}}">
-					<h2>{{ "mainHeader" | translate }}</h2>
-					<p>{{ "contactInfo" | translate }}</p>
+					<img src="/public/RD_contact_banner.png" style="border:none;background:transparent;box-shadow:none;margin-top:20px" class="contact-img animated" height="143" width="800" />
+					<div class="contact-btn">
+					<a target="_blank" href="" ng-click="toggleContact()"><i class="fa fa-3x fa-envelope contact-fa"></i></a>
+						<a target="_blank" href="https://www.facebook.com/rockdogbicycles" class="add-con animated"><i class="fa fa-3x fa-facebook-official contact-fa"></i></a>
+						<a target="_blank" href="https://instagram.com/rockdogbicycles/" class="add-con animated"><i class="fa fa-3x fa-instagram contact-fa"></i></a>
+						<a target="_blank" href="https://www.google.de/maps/dir/Enschede,+Niederlande/Parkweg+83,+7545+MT+Enschede,+Niederlande/@52.2234472,6.8778319,16z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x47b8147510042cfd:0x6ad8eb288733dbeb!2m2!1d6.8903292!2d52.2223453!1m5!1m1!1s0x47b813921ba59f41:0xce1b144ad4554596!2m2!1d6.8724375!2d52.2204918" class="add-con animated"><i class="fa fa-3x fa-compass contact-fa"></i></a>
+											<br>
+					<h4 class="animated contact-email">info@rockdog.nl<br>+31(0)639313807</h4>
+
+					</div>
 					</section>
 					<section data-nav-left="{{'presentation' | translate}}" data-nav-up="{{'contact' | translate}}">
 						<h2>Basement Level 1</h2>

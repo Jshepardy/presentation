@@ -11,14 +11,16 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background-color: rgb(36,36,36);}
+  background-color: black;
+  background-image: url('/public/rd-l.png');
+  background-repeat: no-repeat;
+  background-position: center;}
 
 .reveal {
-  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-  font-size: 38px;
-  font-weight: normal;
-  color: #fff; 
-  background-color: rgba(36,36,36,0.6);}
+font-family: "Arial Black", Arial;
+font-weight: 900;   font-size: 38px;
+  color: #fff;
+  transition: all 2s;}
 
 ::selection {
   color: #fff;
@@ -35,8 +37,8 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
-  font-weight: 600;
+font-family: "Arial Black", Arial;
+font-weight: 900;  font-weight: bolder;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: uppercase;
@@ -44,16 +46,16 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.5em; }
+  font-size: 2.5em; letter-spacing: -3px;}
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 1.6em; letter-spacing: -3px;}
 
 .reveal h3 {
-  font-size: 1.3em; }
+  font-size: 1.3em; letter-spacing: -3px;}
 
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1em; letter-spacing: -3px;}
 
 .reveal h1 {
   text-shadow: none; }
@@ -62,8 +64,8 @@ body {
  * OTHER
  *********************************************/
 .reveal p {
-  margin: 20px 0;
-  line-height: 1.3; }
+  margin: 10px 0;
+  line-height: 1; }
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img, .reveal video, .reveal iframe {
@@ -187,21 +189,13 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #000;
-  font-weight: bold;
-  text-decoration: underline;
 
   -webkit-transition: all 0.75s ease;
   -moz-transition: all 0.75s ease;
   transition: all 0.75s ease; }
 
 .reveal a:hover {
-  background-color: #eee;
-  border-radius: 20px;
-  padding: 8px;
-  text-shadow: none;
-  border: none; 
-  box-shadow: 2px 1px 1px 1px black;}
+}
 
 .reveal .roll span:after {
   color: #fff;
@@ -211,7 +205,7 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
+  margin: 0px 0px;
   background: rgba(255, 255, 255, 0.12);
   border: 4px solid #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
@@ -275,3 +269,8 @@ body {
 
 .fa {
   font-family: FontAwesome !important; }
+* {
+font-family: "Arial Black", Arial;
+font-weight: 900;  font-weight: bolder;
+letter-spacing: -1px;
+}
